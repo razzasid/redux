@@ -1,29 +1,27 @@
 export function myCreateStore(reducer) {
-  let state;
-
-  const listeners = [];
+  let state
+  const listeners = []
   const store = {
     getState() {
-      return state;
+      return state
     },
     dispatch(action) {
-      state = reducer(state, action);
+      state = reducer(state, action)
       listeners.forEach((listener) => {
-        listener();
-      });
+        listener()
+      })
     },
     subscribe(listener) {
-      listeners.push(listener);
-      debugger;
+      listeners.push(listener)
       return function () {
         const listenerIndex = listeners.findIndex(
           (registeredListeners) => registeredListeners === listener
-        );
-        listeners.splice(listenerIndex, 1);
-      };
+        )
+        listeners.splice(listenerIndex, 1)
+      }
     },
-  };
+  }
 
-  store.dispatch({ type: "@@INIT" });
-  return store;
+  store.dispatch({ type: '@@INIT' })
+  return store
 }
