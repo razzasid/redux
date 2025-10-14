@@ -1,5 +1,5 @@
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   margin: 0;
 }
 
@@ -122,4 +122,104 @@ form button {
 .price {
   font-size: 24px;
   margin: 0;
+}
+
+.cart-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.cart-header {
+  font-weight: 700;
+  padding: 24px;
+}
+
+.cart-item-container:not(:last-child) {
+  border-bottom: 1px solid #898989;
+}
+
+.cart-item-container {
+  padding: 12px 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+}
+
+.wishlist-item-container {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 12px 24px;
+  border-bottom: 1px solid #898989;
+}
+
+/* Header row for wishlist */
+.wishlist-header {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  padding: 12px 24px;
+  border-bottom: 1px solid #898989;
+}
+
+/* Wishlist item container (each item row) */
+.wishlist-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 24px;
+}
+.wishlist-item-container img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.rating {
+  color: #fbbf24; /* gold star color */
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.cart-item-container > div:not(.cart-item) {
+  justify-content: center;
+}
+
+.cart-item-container > div:last-child {
+  justify-content: flex-end;
+}
+
+.cart-item-container img {
+  width: 60px;
+}
+
+.cart-item-container > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cart-icon {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.cart-items-count {
+  position: absolute;
+  font-size: 12px;
+  background-color: black;
+  border-radius: 100%;
+  color: white;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -5;
+  left: 50%;
+  transform: translate(-40%, -90%);
 }
